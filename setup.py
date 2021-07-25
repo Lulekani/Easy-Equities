@@ -1,7 +1,7 @@
 from distutils.core import setup
 setup(
   name = 'EasyEquities',         # How you named your package folder (MyLib)
-  packages = ['Trading'],   # Chose the same as "name"
+  packages = ['EasyEquities'],   # Chose the same as "name"
   version = '1.0',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'EasyEquities active scraper to issue trading instructions',   # Give a short description about your library
