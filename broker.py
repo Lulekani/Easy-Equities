@@ -168,33 +168,4 @@ class EasyEquities:
 
         self.close()
 
-if __name__ == '__main__':
-    from finance import Yahoo
-
-    username = None
-    password = None
-
-    from yahoo_fin import stock_info as si
-
-    import yfinance as yf
-
-    try:
-        parser = configparser.ConfigParser()
-        parser.read("./Source/Configurations/Account.cfg")
-        username = parser.get('EasyEquities','Username')
-        password = parser.get('EasyEquities','Password')
-    except Exception as e:
-        print("ERROR:\t{0}".format(e))
-        sys.exit(1)
-        traceback.print_exc()
-    finally:
-        #easy_equities = EasyEquities(username,  password, account='DEMO')
-        #for ticker in easy_equities.holdings():
-            #easy_equities.sell(ticker)
-        #easy_equities.buy('CPI', shares = 7)
-        #easy_equities.sell('CPI')
-        #print(easy_equities.balance())
-
-        msft = yf.Ticker("CPI.XJSE")
-        print(msft.info)
 
