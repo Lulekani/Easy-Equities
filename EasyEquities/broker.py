@@ -175,15 +175,4 @@ class EasyEquities:
         self.close()
 
 
-if __name__ == '__main__':
-    username = 'kloniphani'
-    password = '~W0nd3r!'
-
-    easy_equities = EasyEquities(username,  password, account='DEMO')
-    #for ticker in easy_equities.holdings():
-        #easy_equities.sell(ticker)
-    #easy_equities.buy('CPI', shares = 7)
-    #easy_equities.sell('CPI')
-    print(easy_equities.balance())
-
 
