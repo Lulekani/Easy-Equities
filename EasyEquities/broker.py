@@ -4,12 +4,14 @@ import traceback
 import configparser
 import time
 import re
+from requests.api import options
 
 from selenium import webdriver
 from selenium.webdriver.common import keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.firefox.options import Options
 from urllib3.packages.six import b
 from webdriver_manager.firefox import GeckoDriverManager
 from bs4 import BeautifulSoup
@@ -18,6 +20,7 @@ class EasyEquities:
     timeout = 3
     driver = None
     account = None
+    options = None
 
     def __init__(self) -> None:
         pass
@@ -29,10 +32,13 @@ class EasyEquities:
             self.account = 'slick-slide04'
         if account == 'ZAR':
             self.account = 'slick-slide00'
+        self.options = Options()
 
 
     def open(self):
+        self.options.headless = True
         self.driver = webdriver.Firefox(
+            options = self.options,
             executable_path=GeckoDriverManager().install())
         self.driver_wait = WebDriverWait(self.driver, 90)
         self.login(self.Username, self.Password)
@@ -167,5 +173,17 @@ class EasyEquities:
             'value-allocations__trade-button').click()
 
         self.close()
+
+
+if __name__ == '__main__':
+    username = 'kloniphani'
+    password = '~W0nd3r!'
+
+    easy_equities = EasyEquities(username,  password, account='DEMO')
+    #for ticker in easy_equities.holdings():
+        #easy_equities.sell(ticker)
+    #easy_equities.buy('CPI', shares = 7)
+    #easy_equities.sell('CPI')
+    print(easy_equities.balance())
 
 
