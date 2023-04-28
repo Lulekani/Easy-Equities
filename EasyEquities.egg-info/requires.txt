@@ -1,5 +1,0 @@
-validators
-beautifulsoup4
-selenium
-urllib3
-webdriver_manager
