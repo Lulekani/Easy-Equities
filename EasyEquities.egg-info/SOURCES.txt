@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+EasyEquities/__init__.py
+EasyEquities/broker.py
+EasyEquities.egg-info/PKG-INFO
+EasyEquities.egg-info/SOURCES.txt
+EasyEquities.egg-info/dependency_links.txt
+EasyEquities.egg-info/requires.txt
+EasyEquities.egg-info/top_level.txt

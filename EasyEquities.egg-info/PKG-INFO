@@ -1,3 +1,22 @@
+Metadata-Version: 2.1
+Name: EasyEquities
+Version: 1.2.2
+Summary: EasyEquities active scraper to issue trading instructions
+Home-page: https://github.com/kloniphani/EasyEquities
+Download-URL: https://github.com/kloniphani/EasyEquities/archive/refs/tags/v1.2.1.tar.gz
+Author: Kloniphani Maxakadzi
+Author-email: Kloniphani@gmail.com
+License: MIT
+Keywords: South Africa,Trading,EasyEQuities
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # [EasyEquities](https://www.easyequities.co.za/) Python Package
 This is a Python package for interacting with the [EasyEquities](https://www.easyequities.co.za/) trading platform. It provides a simple way to log in, check account balances, and retrieve your holdings.
 
